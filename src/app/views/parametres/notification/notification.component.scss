@@ -1,0 +1,70 @@
+@import url('http://fonts.googleapis.com/css?family=Calibri:400,300,700');
+
+body {
+  background-color: #D32F2F;
+  font-family: 'Calibri', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-page {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.mt-30 {
+  margin-top: 50px;
+}
+
+.mb-30 {
+  margin-bottom: 50px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: 0;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.card .card-title {
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+ul.list-style-none li {
+  list-style: none;
+}
+
+ul.list-style-none li a {
+  color: #673AB7;
+  padding: 8px 0;
+  display: block;
+  text-decoration: none;
+}
+
+.m-t-5 {
+  margin-top: 5px;
+}
+
+.w-30px {
+  width: 30px;
+}

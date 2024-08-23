@@ -1,0 +1,135 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 card-margin">
+            <div class="card search-form">
+                <div class="card-body p-0">
+                    <form id="search-form" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <select [(ngModel)]="category" name="category" class="form-control" id="exampleFormControlSelect1"
+                                                style="background-color: #f8f9fa; border-left: 1px solid #e6e4e9; border-bottom: 1px solid #e6e4e9; border-top: 1px solid #e6e4e9; border-radius: 8px 0 0 8px;">
+                                            <option value="">Categorie</option>
+                                            <option value="informatique">informatique</option>
+                                            <option value="electronique">electronique</option>
+                                            <option value="sports-loisirs">sports-loisirs</option>
+                                            <option value="terrasse-jardin-exterieur">terrasse-jardin-exterieur</option>
+                                            <option value="telephone-tablette">telephone-tablette</option>
+                                            <option value="jeux-et-jouets">jeux-et-jouets</option>
+                                            <option value="fashion-mode">fashion-mode</option>
+                                            <option value="maison-cuisine-jardin">maison-cuisine-jardin</option>
+                                            <option value="automobile-outils">automobile-outils</option>
+                                            <option value="beaute-hygiene-sante">beaute-hygiene-sante</option>
+                                            <option value="bebe-puericulture">bebe-puericulture</option>
+                                            <option value="industriel-scientifique">industriel-scientifique</option>
+                                            <option value="livres-papeterie">livres-papeterie</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-8 col-md-6 col-sm-12 p-0">
+                                        <input [(ngModel)]="productName" name="productName" type="text" placeholder="Nom du produit..." class="form-control" id="search">
+                                    </div>
+                                    <div class="col-lg-1 col-md-3 col-sm-12 p-0">
+                                        <button type="submit" class="btn btn-base">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-margin">
+                <div class="card-body">
+                    <div class="row search-body">
+                        <div class="col-lg-12">
+                            <div class="search-result">
+                                <div class="result-header">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="records"><b>Résultats :</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-body">
+                                    <div *ngIf="isLoading" class="loadings pt-lg-5 p-lg-5" >
+                                        <img src="assets/loading.svg" alt="loading"/>
+                                    </div>
+                                    <div *ngIf="timeoutMessage" class="alert alert-warning">
+                                        La demande prend plus de temps que prévu. Veuillez réessayer plus tard.
+                                    </div>
+                                    <div *ngIf="noResults && !isLoading" class="alert alert-info">
+                                        Aucun résultat trouvé pour votre recherche. Veuillez essayer avec des critères différents.
+                                    </div>
+                                    <div *ngIf="!isLoading && !noResults && !timeoutMessage">
+                                        <div class="table-responsive">
+                                            <table class="table widget-26">
+                                                <tbody>
+                                                <tr></tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="widget-26-job-title">
+                                                            <p class="type m-0"><b> Le produit : </b></p>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="widget-26-job-title">
+                                                            <p class="type m-0">{{product}}</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="widget-26-job-title">
+                                                            <p class="type m-0"><b> Le prix max sur le marché : </b></p>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="badge badge-soft-danger">{{max_price}} Dhs</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="widget-26-job-title">
+                                                            <p class="type m-0"><b> Le prix min sur le marché : </b></p>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="badge badge-soft-success">{{min_price}} Dhs</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="widget-26-job-title">
+                                                            <p class="type m-0"><b>Sources :</b></p>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="widget-26-job-title">
+                                                            <p class="type m-0">{{sources}}</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

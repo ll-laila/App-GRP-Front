@@ -1,0 +1,60 @@
+
+<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+
+<!------------------------------------bavbar------------------------------------------>
+
+<nav class="navbar navbar-light bg-light shadow-lg pb-3">
+    <a class="navbar-brand" style="padding-left: 30px;" >
+        <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+        <span class="h1 fw-bold mb-0">erplain support</span>
+    </a>
+</nav>
+
+
+<section class="price_plan_area section_padding_130_80 pt-4 mt-5" id="pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card shadow-lg">
+                    <div class="card-header border-0">
+                        <h3 class="mb-0">Administrateurs</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Code</th>
+                                <th scope="col">Nom d'utilisateur</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Téléphone</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @for (it of adminsList; track it; let i = $index) {
+                                <tr>
+                                    <th>{{it.id}}</th>
+                                    <td>{{it.username}}</td>
+                                    <td>{{it.email}}</td>
+                                    <td>{{it.phone}}</td>
+                                    <td>
+                                   <a (click)="getDetails(it.id)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
+                                        </svg>
+                                   </a>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

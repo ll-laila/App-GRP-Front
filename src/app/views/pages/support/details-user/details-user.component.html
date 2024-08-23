@@ -1,0 +1,76 @@
+
+<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+
+<!------------------------------------bavbar------------------------------------------>
+
+<nav class="navbar navbar-light bg-light shadow-lg pb-3">
+    <a class="navbar-brand" style="padding-left: 30px;" >
+        <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+        <span class="h1 fw-bold mb-0">erplain support</span>
+    </a>
+</nav>
+
+
+<section class="price_plan_area section_padding_130_80 pt-4 mt-5" id="pricing">
+    <div class="container">
+        <div align="left">
+            <button cButton class="mb-2 btn-color" routerLink="/support">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card shadow-lg">
+                    <div class="card-header border-0">
+                        <h4 class="mb-1"><b>Details utilisateur</b></h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <tbody>
+                            <tr>
+                                <th>Nom d'utilisateur</th>
+                                    <td>{{admin.username}}</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>{{admin.email}}</td>
+                            </tr>
+                            <tr>
+                                <th>Téléphone</th>
+                                <td>{{admin.phone}}</td>
+                            </tr>
+                            <tr>
+                                <th>Entreprises</th>
+                                <td>
+                                    <li *ngFor="let entreprise of entreprises">
+                                            {{ entreprise.nom }}
+                                    </li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Plan d'abonnement</th>
+                                <td>{{subscription.plan?.name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Date début d'abonnement</th>
+                                <td>{{ subscription?.subscriptionDate | date: 'dd/MM/yyyy' }}</td>
+                            </tr>
+                            <tr>
+                                <th>Date fin d'abonnement</th>
+                                <td>{{subscription.subscriptionEndDate  | date: 'dd/MM/yyyy'}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
