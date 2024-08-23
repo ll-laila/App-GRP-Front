@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{aa as a}from"./chunk-NYO24GET.mjs";var c=(()=>{let t=class t{constructor(){this.USERNAME_KEY="username"}setUsername(r){this.username=r,localStorage.setItem(this.USERNAME_KEY,r)}getUsername(){return localStorage.getItem(this.USERNAME_KEY)||""}clearUsername(){localStorage.removeItem(this.USERNAME_KEY)}};t.\u0275fac=function(o){return new(o||t)},t.\u0275prov=a({token:t,factory:t.\u0275fac,providedIn:"root"});let e=t;return e})();export{c as a};
