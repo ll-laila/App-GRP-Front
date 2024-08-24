@@ -1,7 +1,7 @@
 
 import {Environment} from "./ienvironment";
 
-const host = "http://13.60.32.20:8080"
+const host = "http://13.60.227.54:8080"
 
 export const environment: Environment = {
   production: false,

@@ -17,7 +17,7 @@ export class StripeService {
   constructor() { }
 
   charge(cantidad: any, tokenId: any){
-     return  this.http.post('http://13.60.32.20:4000/stripe_checkout',{
+     return  this.http.post('http://13.60.180.224:4000/stripe_checkout',{
          stripeToken: tokenId,
        cantidad: cantidad
      }).toPromise()
