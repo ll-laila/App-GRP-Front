@@ -25,8 +25,8 @@ import {EntrepriseSelectedService} from "../../../../controller/shared/entrepris
     DropdownComponent, DropdownToggleDirective, DropdownMenuDirective, DropdownHeaderDirective, DropdownItemDirective,
     ModalComponent, ModalToggleDirective, ModalHeaderComponent, ModalBodyComponent, TooltipDirective, ModalFooterComponent, PopoverDirective, ModalTitleDirective, ButtonCloseDirective,
   ],
-  templateUrl: './devises-list.Component.html',
-  styleUrl: './devises-list.Component.scss'
+  templateUrl: './devises-list.component.html',
+  styleUrl: './devises-list.component.scss'
 })
 export class DevisesListComponent {
   protected loading = false
