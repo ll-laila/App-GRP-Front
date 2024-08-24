@@ -1,2 +1,0 @@
-import './polyfills.server.mjs';
-import{a as i,b as a}from"./chunk-D4RJRHB5.mjs";var n=class r extends i{constructor(){super(...arguments),this.name=new a(()=>this.item().name,t=>this.item().name=t,t=>{this.name.stringValidators?.required()?.pattern(/^[a-zA-Z]+$/,"Nom invalide,Veuillez entrer un nom contenant uniquement des lettres alphab\xE9tiques")?.valid()}),this.validatorItems=[this.name]}getValidatorItem(t){return this[t]}static init(t){let e=new r;return e.item=t,e}};export{n as a};
