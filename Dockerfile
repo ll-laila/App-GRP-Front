@@ -12,7 +12,7 @@ RUN chmod +x ./node_modules/.bin/ng
 RUN npm cache clean --force
 
 # Construisez l'application Angular
-RUN npm run build -- --configuration production
+RUN npm run build
 
 # serve the angular app with nginx
 FROM nginx:1.23-alpine

@@ -24,8 +24,8 @@ import {generatePageNumbers, paginationSizes} from "src/app/controller/utils/pag
     DropdownComponent, DropdownToggleDirective, DropdownMenuDirective, DropdownHeaderDirective, DropdownItemDirective,
     ModalComponent, ModalToggleDirective, ModalHeaderComponent, ModalBodyComponent, TooltipDirective, ModalFooterComponent, PopoverDirective, ModalTitleDirective, ButtonCloseDirective,
   ],
-  templateUrl: './adresse-list.Component.html',
-  styleUrl: './adresse-list.Component.scss'
+  templateUrl: './adresse-list.component.html',
+  styleUrl: './adresse-list.component.scss'
 })
 export class AdresseListComponent {
   protected loading = false

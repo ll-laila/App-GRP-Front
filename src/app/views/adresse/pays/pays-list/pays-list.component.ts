@@ -24,8 +24,8 @@ import {generatePageNumbers, paginationSizes} from "src/app/controller/utils/pag
     DropdownComponent, DropdownToggleDirective, DropdownMenuDirective, DropdownHeaderDirective, DropdownItemDirective,
     ModalComponent, ModalToggleDirective, ModalHeaderComponent, ModalBodyComponent, TooltipDirective, ModalFooterComponent, PopoverDirective, ModalTitleDirective, ButtonCloseDirective,
   ],
-  templateUrl: './pays-list.Component.html',
-  styleUrl: './pays-list.Component.scss'
+  templateUrl: './pays-list.component.html',
+  styleUrl: './pays-list.component.scss'
 })
 export class PaysListComponent {
   protected loading = false
